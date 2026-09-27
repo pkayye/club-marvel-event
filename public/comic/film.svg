@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Short Film placeholder artwork">
+  <title>Short Film — placeholder artwork</title>
+  <defs>
+    <pattern id="perp" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <rect x="24" y="24" width="32" height="32" fill="#F4F1EA"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="#0E0E0E"/>
+  <rect x="0" y="0" width="120" height="1000" fill="url(#perp)"/>
+  <rect x="680" y="0" width="120" height="1000" fill="url(#perp)"/>
+  <rect x="170" y="230" width="460" height="300" fill="#E62429"/>
+  <path d="M360 300l140 80-140 80z" fill="#F4F1EA"/>
+  <rect x="170" y="580" width="460" height="16" fill="#F4F1EA"/>
+  <rect x="170" y="620" width="320" height="16" fill="#F4F1EA"/>
+  <rect x="170" y="660" width="400" height="16" fill="#F4F1EA"/>
+</svg>

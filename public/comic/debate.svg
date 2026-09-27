@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Multiverse Debate placeholder artwork">
+  <title>Multiverse Debate — placeholder artwork</title>
+  <rect width="800" height="1000" fill="#EAE6DC"/>
+  <rect x="400" y="120" width="8" height="560" fill="#0E0E0E"/>
+  <path d="M80 180h300v300a150 150 0 0 1-300 0z" fill="#0E0E0E"/>
+  <path d="M420 300h300v300a150 150 0 0 1-300 0z" fill="#E62429"/>
+  <path d="M150 300c40-30 90-30 130 0" fill="none" stroke="#F4F1EA" stroke-width="22"/>
+  <path d="M490 420c40 30 90 30 130 0" fill="none" stroke="#F4F1EA" stroke-width="22"/>
+  <rect x="0" y="760" width="800" height="18" fill="#0E0E0E"/>
+  <rect x="0" y="804" width="600" height="18" fill="#0E0E0E"/>
+  <rect x="0" y="848" width="700" height="18" fill="#0E0E0E"/>
+  <circle cx="700" cy="120" r="56" fill="#E62429"/>
+</svg>

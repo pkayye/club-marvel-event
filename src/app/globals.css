@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Design tokens — Swiss International Typographic Style
+   Off-white paper, black ink, one controlled red accent, hairline rules.
+--------------------------------------------------------------------------- */
+@theme {
+  --color-paper: #f4f1ea;
+  --color-paper-dim: #eae6dc;
+  --color-ink: #0e0e0e;
+  --color-ink-soft: #55524c;
+  --color-red: #e62429;
+  --color-red-deep: #a3141b;
+  --color-rule: rgba(14, 14, 14, 0.14);
+  --color-rule-strong: rgba(14, 14, 14, 0.32);
+
+  --font-display: var(--font-archivo), "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  --font-sans: var(--font-archivo), "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SFMono-Regular", monospace;
+
+  /* Fluid type scale — headlines scale between sections instead of jumping. */
+  --text-display: clamp(2.75rem, 11vw, 9.5rem);
+  --text-display--line-height: 0.86;
+  --text-display--letter-spacing: -0.035em;
+  --text-section: clamp(1.9rem, 5.5vw, 4.25rem);
+  --text-section--line-height: 0.94;
+  --text-section--letter-spacing: -0.02em;
+  --text-lead: clamp(1.05rem, 1.7vw, 1.4rem);
+  --text-lead--line-height: 1.5;
+
+  --ease-swiss: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  * {
+    min-width: 0;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background-color: var(--color-red);
+    color: var(--color-paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-red);
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  /* Lenis: opt out of native smooth scrolling so the two never fight. */
+  .lenis-active {
+    scroll-behavior: auto;
+  }
+
+  /* The intro holds the page still while it plays. */
+  html.intro-locked,
+  html.intro-locked body {
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+}
+
+/* Structural primitives ----------------------------------------------------- */
+
+@utility shell {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+
+  @media (min-width: 1280px) {
+    padding-inline: 3rem;
+  }
+}
+
+/* The strict 12-column grid everything aligns to. */
+@utility grid-12 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.5rem 2rem;
+  }
+}
+
+@utility rule-t {
+  border-top: 1px solid var(--color-rule);
+}
+
+@utility rule-b {
+  border-bottom: 1px solid var(--color-rule);
+}
+
+@utility label-mono {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@utility display-title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@utility section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-section);
+  line-height: 0.94;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Anchor offset so fixed nav never covers a section heading. */
+@utility anchor-offset {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Motion-framework hints for the handful of elements that actually move. */
+@utility moving {
+  will-change: transform;
+}
+
+/* ---------------------------------------------------------------------------
+   Reduced motion: collapse everything to effectively instant. Individual
+   components also branch on the preference, this is the last line of defence.
+--------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

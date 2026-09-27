@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 520" width="320" height="520" role="img" aria-label="Placeholder illustration of the event host, mid-sentence">
+  <title>Event host — placeholder illustration, mid-sentence</title>
+  <!-- Original placeholder artwork drawn for this event in the site's flat
+       geometric style. Not a copy of any existing character design. -->
+  <g>
+    <!-- Katanas, behind the body -->
+    <g transform="rotate(-38 160 250)">
+      <rect x="96" y="146" width="150" height="9" fill="#0E0E0E"/>
+      <rect x="96" y="146" width="28" height="9" fill="#A3141B"/>
+      <rect x="96" y="160" width="150" height="9" fill="#0E0E0E" opacity="0.35"/>
+    </g>
+
+    <!-- Legs -->
+    <path d="M118 326h34l-6 162h-30z" fill="#A3141B"/>
+    <path d="M168 326h34l6 162h-30z" fill="#A3141B"/>
+    <rect x="108" y="470" width="46" height="30" fill="#0E0E0E"/>
+    <rect x="166" y="470" width="46" height="30" fill="#0E0E0E"/>
+
+    <!-- Torso -->
+    <rect x="104" y="168" width="112" height="180" rx="18" fill="#E62429"/>
+    <rect x="128" y="200" width="64" height="112" rx="10" fill="#A3141B"/>
+    <rect x="128" y="200" width="64" height="8" fill="#0E0E0E"/>
+    <rect x="128" y="304" width="64" height="8" fill="#0E0E0E"/>
+
+    <!-- Belt -->
+    <rect x="100" y="330" width="120" height="18" fill="#0E0E0E"/>
+    <rect x="148" y="334" width="24" height="10" fill="#F4F1EA"/>
+
+    <!-- Right arm, raised mid-gesture -->
+    <rect x="196" y="164" width="26" height="98" rx="13" fill="#C41E23" transform="rotate(34 209 213)"/>
+    <circle cx="238" cy="150" r="19" fill="#0E0E0E"/>
+    <rect x="250" y="138" width="16" height="26" rx="6" fill="#0E0E0E"/>
+    <!-- Left arm, hanging -->
+    <rect x="96" y="222" width="26" height="112" rx="13" fill="#A3141B" transform="rotate(6 109 278)"/>
+    <circle cx="104" cy="334" r="15" fill="#0E0E0E"/>
+
+    <!-- Head -->
+    <rect x="116" y="56" width="88" height="112" rx="26" fill="#E62429"/>
+    <rect x="116" y="56" width="88" height="10" fill="#A3141B"/>
+    <rect x="124" y="84" width="72" height="46" rx="20" fill="#0E0E0E"/>
+    <path d="M136 98l20 10-20 10z" fill="#F4F1EA"/>
+    <path d="M184 98l-20 10 20 10z" fill="#F4F1EA"/>
+    <path d="M146 158h28v16h-28z" fill="#0E0E0E"/>
+
+    <ellipse cx="160" cy="506" rx="80" ry="9" fill="#0E0E0E" opacity="0.14"/>
+  </g>
+</svg>
